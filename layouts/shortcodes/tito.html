@@ -1,0 +1,2 @@
+{{ $event := default $.Page.Site.Params.event.tito.name (.Get "event")  }}
+<tito-widget event="{{ $event }}"></tito-widget>

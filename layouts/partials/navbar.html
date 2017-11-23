@@ -26,6 +26,7 @@
                 <a class="fa-share-alt" href="#share-menu">Share</a>
             </li>
             {{ end }}
+            {{ if (.Site.Params.showSearch) }}
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
                 <form id="search" method="get" action="//google.com/search">
@@ -33,6 +34,7 @@
                     <input type="hidden" name="as_sitesearch" value="{{ .Site.BaseURL }}">
                 </form>
             </li>
+            {{ end }}
             <li class="menu">
                 <a class="fa-bars" href="#menu">Menu</a>
             </li>

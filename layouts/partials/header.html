@@ -63,6 +63,11 @@
         {{ end }}
 
       {{ template "_internal/google_analytics.html" . }}
+
+      {{ if isset .Site.Params.event "tito" }}
+          <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
+          <script src='https://js.tito.io/v1' async></script>
+      {{ end }}
     </head>
     <body>
 

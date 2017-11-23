@@ -76,7 +76,7 @@
 
   <!-- This if statement only applies if someone goes to the /categories url -->
   <!-- Otherwise this section is shown for all other links -->
-  {{ if ne ($.Scratch.Get "showCategories") false }}
+  {{ if and (ne ($.Scratch.Get "showCategories") false) (.Site.Params.showCategories) }}
   <!-- Categories List -->
     <section id="categories">
       <header>
