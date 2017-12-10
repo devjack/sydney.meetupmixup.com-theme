@@ -29,6 +29,11 @@
         {{ partial "social" . }}
       </ul>
     {{ end }}
+
+    {{ with $.Site.Params.event.tito }}
+        <tito-button event="{{ .name }}">Register Now!</tito-button>
+    {{ end }}
+
   </section>
 
   <!-- Posts List -->
